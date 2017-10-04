@@ -1,3 +1,3 @@
 # Presentation/Tutorial/Introduction/GettingFeetWetInBayesianOptimisation/
 
-[Click here to see](jgamper.github.io/GettingFeetWetInBayesianOptimisation/)
+[Click here to see](https://jgamper.github.io/GettingFeetWetInBayesianOptimisation/)
