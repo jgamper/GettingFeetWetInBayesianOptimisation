@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+    <!-- Metadata to edit -->
+		<title>Bayesian Optimisation Overview</title>
+		<meta name="author" content="Jevgenij Gamper">
+    <!-- /Metadata to edit -->
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<link rel="stylesheet" href="css/custom.css">
+		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
+		<script>
+			if( window.location.search.match( /print-pdf/gi ) ) {
+				var link = document.createElement( 'link' );
+				link.rel = 'stylesheet';
+				link.type = 'text/css';
+				link.href = 'css/print/pdf.css';
+				document.getElementsByTagName( 'head' )[0].appendChild( link );
+			}
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+			<div class="slides">
+
+        <!-- Title slide -->
+			<section>
+					<section>
+						<h3>Bayesian Optimisation Overview</h3>
+						<p>
+							<br>
+							<br>
+							<span style="font-size:0.7em">Jevgenij Gamper</span>
+							<br>
+							<span style="font-size:0.7em">TIA Lab Meeting 05/10/2017</span>
+							<br>
+							<br>
+							<span style="font-size:0.6em">Slides available at <a href="jgamper.github.io/BayesOptOverview/">jgamper.github.io/GettingFeetWetInBayesianOptimisation</a></span><br>
+							<span style="font-size:0.6em">for all the links and useful resources click below</span>
+						</p>
+						<a href="#" class="navigate-down">
+							<img style="color:black" width="178" height="238" alt="Click here for resources">
+						</a>
+						<aside class="notes">
+	            Non-existant at the moment
+						</aside>
+					</section>
+					<!-- Resources sub-slide -->
+					<section class="scrollable-slide">
+						<p>Video Lectures in order of decreasing awesomnes:</p>
+						<ul>
+							<li style="font-size:0.6em">N. Freitas (Oxford,DeepMind) lecture on <a href ref="https://www.youtube.com/watch?v=vz3D36VXefI">Bayesian Optimisation and Multi-Armed Bandits</a></li>
+							<li style="font-size:0.6em">Javier Gonzalez (Amazon): <a href ref="https://www.youtube.com/watch?list=PLpTp0l_CVmgwyAthrUmmdIFiunV1VvicM&v=OtWjB6lv4CE">Introduction to Bayesian Optimisation</a></li>
+							<li style="font-size:0.6em">Gilles Louppe (CERN) presentation on <a href ref="https://www.youtube.com/watch?v=DGJTEBt0d-s">scikit-optimise and a bit on Bayes Opt using RF</a></li>
+						</ul>
+						<p>Bayesian Optimisation Software (Python)</p>
+						<ul>
+							<li style="font-size:0.6em"><a href ref="https://scikit-optimize.github.io/">scikit-optimise</a></li>
+								<ul>
+									<li style="font-size:0.4em">Most straightforward to use, see third video above</li>
+									<li style="font-size:0.4em">Allows custom regressors (in addition to GP) for surrogate underlying function modelling: Random Forests, Neural Netwokrs, etc..</li>
+								</ul>
+							<li style="font-size:0.6em"><a href ref="https://gpflowopt.readthedocs.io/en/latest/intro.html#install">GPflowOpt</a></li>
+							<ul>
+								<li style="font-size:0.4em">Built on top of GPflow [which was inspired by GPy(Sheffield)]; built on top of TensorFlow</li>
+								<li style="font-size:0.4em">Implements sparse GP approximations >> scalable</li>
+								<li style="font-size:0.4em">More customisation: kernel design</li>
+								<li style="font-size:0.4em">Early stages, ontly continious parameters (can easily add categorical though: hamming distance)</li>
+							</ul>
+							<li style="font-size:0.6em"><a href ref="https://sheffieldml.github.io/GPyOpt/">GPyOpt</a></li>
+							<ul>
+								<li style="font-size:0.4em">Lots of <a href ref="https://github.com/SheffieldML/GPyOpt/tree/devel/manual">examples</a></li>
+								<li style="font-size:0.4em">More customisation</li>
+								<li style="font-size:0.4em">Supports discrete and categorical parameters</li>
+							</ul>
+						</ul>
+						<aside class="notes">
+				Take a look at how widely different is the job area that these researchers come from, Freitas from DeepMind (RF naturally the tradeoff between exploration and
+				exploitation), Gonzalez from Amazon where it is oriented more towards industrial design, Gilles Louppe from CERN where they tweek LHC sensor parameters using
+				Bayesian Optimisation
+						</aside>
+
+						<p>Interesting literature:</p>
+						<ul>
+							<li style="font-size:0.4em">Brochu, Cora, and de Freitas, <a href ref="https://arxiv.org/abs/1012.2599">“A Tutorial on Bayesian Optimization of Expensive Cost Functions,
+								with Application to Active User Modeling and Hierarchical Reinforcement Learning.”</a></li>
+							<li style="font-size:0.4em">Shahriari, Swersky, and Freitas, <a href ref="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7352306">“Taking the Human Out of the Loop:
+A Review of Bayesian Optimization”</a></li>
+							<li style="font-size:0.4em">Snoek, Larochelle, and Adams, <a href ref="https://arxiv.org/pdf/1206.2944.pdf">“Practical Bayesian Optimization of Machine Learning Algorithms.”</a></li>
+							<li style="font-size:0.4em">Swersky, Snoek, and Adams, <a href ref="https://arxiv.org/abs/1406.3896">“Freeze-Thaw Bayesian Optimization.”</a></li>
+						</ul>
+					</section>
+			</section>
+
+			<!-- Motivation slides -->
+			<section>
+				<section>
+				<blockquote align="justify">
+					"Civilisation advances by the number of important operations which we can perform without thinking of them" (Alfred North Whitehead)
+				</blockquote>
+				<p class="fragment fade-in">We are interested in smarter automation!</p>
+				<ul>
+					<li class="fragment fade-in">Automatic model configuration</li>
+					<li class="fragment fade-in">Automate the design of physical experiment</li>
+				<ul>
+
+				</section>
+				<section>
+				<h3>Motivating examples</h3>
+				<table >
+					  <tr>
+					    <td class="row" style="text-align: center;"><img src="Suplementary/fusion_example.jpg" width="80%" height="80%"></td>
+					  </tr>
+					  <tr>
+					    <td class="row" style="text-align: center;">Baltz et al., “Achievement of Sustained Net Plasma Heating in a Fusion Experiment with the Optometrist Algorithm.”</td>
+					  </tr>
+					</table>
+				</section>
+				<section>
+				<h3>Motivating examples</h3>
+				<table >
+					  <tr>
+						<td class="row" style="text-align: center;"><img src="Suplementary/lda_param_examples.png" width="80%" height="80%"></td>
+					  </tr>
+					  <tr>
+						<td class="row" style="text-align: center;">Snoek, Larochelle, and Adams, “Practical Bayesian Optimization of Machine Learning Algorithms.”</td>
+					  </tr>
+					</table>
+				</section>
+			</section>
+
+			<!-- About the function -->
+			<section>
+				<p>$$ \theta^{*} = \underset{x}{\arg\max} \ \mathcal{f}(x)$$</p>
+				<p><br></p>
+				<ul>
+					<li>$\mathcal{f}$ is a <i>black box</i> function (no closed form, no gradients)</li>
+					<li>$\mathcal{f}$ is expensive to evaluate</li>
+					<li>$\mathcal{f}$ most likely we only have access to noisy observations</li>
+				</ul>
+				<p>$$ y = \mathcal{f}(x) + \epsilon$$</p>
+			</section>
+
+			<section>
+				<p>How do people usually optimise?</p>
+				<p><br></p>
+				<ul>
+					<li>Grid search</li>
+					<li>Random Search</li>
+					<li>Grad student descent</li>
+					<li>Other black magic, and heuristics</li>
+				</ul>
+			</section>
+
+			<!-- What do we do when we have no access to the underlying function -->
+			<section>
+				<section>
+					<h3>What do we do when we have no access to the underlying function?</h3>
+					<img src="Suplementary/observations.png">
+				</section>
+				<section>
+					<h3>We try to fit a model to it! Regression!</h3>
+					<img src="Suplementary/observations_gp_mean_variance.png">
+					<p>Okay, so what?</p>
+				</section>
+
+				<section>
+					<h3>Gaussian Process (or other regressor) as surrogate model to $\mathcal{f}$</h3>
+					<p>$p(\mathbf{\hat{f}} | \sigma^{2}) = \mathcal{N}(0, \begin{bmatrix} \mathbf{C} + \sigma^{2}\mathbf{I} & \mathbf{R}\\\mathbf{R}^{T} & \mathbf{C}^{*}\end{bmatrix}),$</p>
+					<p>$p(\mathbf{\hat{f}} | \mathbf{y}, \sigma^{2}) = \mathcal{N}(\mathbf{\mu}^{*}, \mathbf{\Sigma}^{*}),$</p>
+					<p>$\mathbf{\mu}^{*} = \mathbf{R}^{T} (\mathbf{C} + \sigma^{2}\mathbf{I})^{-1} \mathbf{y}$</p>
+					<p>$\mathbf{\Sigma}^{*} = -\mathbf{R}^{T} (\mathbf{C} + \sigma^{2}\mathbf{I})^{-1} \mathbf{R}$</p>
+				</section>
+
+				<section>
+					<img src="Suplementary/aquisition_func.png">
+				</section>
+
+				<section>
+					<div id="left">
+						<img src="Suplementary/aquisition_func.png">
+					</div>
+					<div id="right">
+						<img src="Suplementary/gp_algorithm.png">
+					</div>
+				</section>
+
+				<section>
+					<img src="Suplementary/gp_algorithm.png">
+					<p>Acquisition function $u(x)$ guides the optimisation by determining which $x_{t+1}$ to observe next</p>
+					<ul>
+						<li><b>Exploration</b>: prefer high variance regions</li>
+						<li><b>Explotation</b>: prefer high mean regions</li>
+					</ul>
+				</section>
+
+				<section>
+					<img src="Suplementary/example_ac.png" width="80%">
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<h3>Is there a free lunch though?</h3>
+				</section>
+				<section>
+					<p>Choice of $u(x)$ heavily affects optimisation results</p>
+					<img src="Suplementary/ac_comparison.png" width="80%">
+				</section>
+
+				<section>
+					<p>Scalability in number of parameters</p>
+					<p class="fragment fade-up">Up to 10 is okay..</p>
+				</section>
+
+				<section>
+					<p>But there are solutions!</p>
+					<ul>
+						<li>Use ensemble of acquisition functions (see resources)</li>
+						<li>Use random forest regressor (Fusion example)</li>
+					<ul>
+				</section>
+
+			</section>
+
+			<section>
+				<section>
+					<p>Swersky, Snoek, and Adams, “Freeze-Thaw Bayesian Optimization.”</p>
+					<p>$p(\mathbf{f} | \mathbf{y}, \sigma^{2}) = \mathcal{N}(\mathbf{\mu}, \mathbf{\Sigma}),$</p>
+					<img src="Suplementary/training_curves.png" width="60%">
+				</section>
+			</section>
+
+			<section>
+				<section>
+					<p>Snoek, Larochelle, and Adams, “Practical Bayesian Optimization of Machine Learning Algorithms.”</p>
+					<ul>
+						<li>Multi-task learning</li>
+						<li>Expected Improvement per second</li>
+					</ul>
+				</section>
+			</section>
+
+			</div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+				transition: 'linear', // default/cube/page/concave/zoom/linear/fade/none
+				math: {
+							mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js',
+							config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+						},
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/math/math.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
