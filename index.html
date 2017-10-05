@@ -184,10 +184,11 @@ A Review of Bayesian Optimization”</a></li>
 
 				<section>
 					<h3>Gaussian Process (or other regressor) as surrogate model to $\mathcal{f}$</h3>
-					<p>$p(\mathbf{\hat{f}} | \sigma^{2}) = \mathcal{N}(0, \begin{bmatrix} \mathbf{C} + \sigma^{2}\mathbf{I} & \mathbf{R}\\\mathbf{R}^{T} & \mathbf{C}^{*}\end{bmatrix}),$</p>
-					<p>$p(\mathbf{\hat{f}} | \mathbf{y}, \sigma^{2}) = \mathcal{N}(\mathbf{\mu}^{*}, \mathbf{\Sigma}^{*}),$</p>
+					<p>$p(\begin{bmatrix} \mathbf{y} \\ \mathbf{f}^{*} \end{bmatrix} | \sigma^{2}) =
+						\mathcal{N}(0, \begin{bmatrix} \mathbf{C} + \sigma^{2}\mathbf{I} & \mathbf{R}\\\mathbf{R}^{T} & \mathbf{C}^{*}\end{bmatrix}),$</p>
+					<p>$p(\mathbf{f}^{*} | \mathbf{y}, \sigma^{2}) = \mathcal{N}(\mathbf{\mu}^{*}, \mathbf{\Sigma}^{*}),$</p>
 					<p>$\mathbf{\mu}^{*} = \mathbf{R}^{T} (\mathbf{C} + \sigma^{2}\mathbf{I})^{-1} \mathbf{y}$</p>
-					<p>$\mathbf{\Sigma}^{*} = -\mathbf{R}^{T} (\mathbf{C} + \sigma^{2}\mathbf{I})^{-1} \mathbf{R}$</p>
+					<p>$\mathbf{\Sigma}^{*} = \mathbf{C}^{*} -\mathbf{R}^{T} (\mathbf{C} + \sigma^{2}\mathbf{I})^{-1} \mathbf{R}$</p>
 				</section>
 
 				<section>
@@ -244,7 +245,7 @@ A Review of Bayesian Optimization”</a></li>
 			<section>
 				<section>
 					<p>Swersky, Snoek, and Adams, “Freeze-Thaw Bayesian Optimization.”</p>
-					<p>$p(\mathbf{f} | \mathbf{y}, \sigma^{2}) = \mathcal{N}(\mathbf{\mu}, \mathbf{\Sigma}),$</p>
+					<p>$\mathcal{N}(\mathbf{\mu}, \mathbf{\Sigma}),$</p>
 					<img src="Suplementary/training_curves.png" width="60%">
 				</section>
 			</section>
