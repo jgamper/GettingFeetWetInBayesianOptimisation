@@ -44,13 +44,13 @@
         <!-- Title slide -->
 			<section>
 					<section>
-						<h3>Bayesian Optimisation Overview</h3>
+						<h3>A glimpse on Bayesian Optimisation</h3>
 						<p>
 							<br>
 							<br>
 							<span style="font-size:0.7em">Jevgenij Gamper</span>
 							<br>
-							<span style="font-size:0.7em">TIA Lab Meeting 05/10/2017</span>
+							<span style="font-size:0.7em">TIA Lab Meeting 10/11/2017</span>
 							<br>
 							<br>
 							<span style="font-size:0.6em">Slides available at <a href="jgamper.github.io/BayesOptOverview/">jgamper.github.io/GettingFeetWetInBayesianOptimisation</a></span><br>
@@ -67,27 +67,27 @@
 					<section class="scrollable-slide">
 						<p>Video Lectures in order of decreasing awesomnes:</p>
 						<ul>
-							<li style="font-size:0.6em">N. Freitas (Oxford,DeepMind) lecture on <a href ref="https://www.youtube.com/watch?v=vz3D36VXefI">Bayesian Optimisation and Multi-Armed Bandits</a></li>
-							<li style="font-size:0.6em">Javier Gonzalez (Amazon): <a href ref="https://www.youtube.com/watch?list=PLpTp0l_CVmgwyAthrUmmdIFiunV1VvicM&v=OtWjB6lv4CE">Introduction to Bayesian Optimisation</a></li>
-							<li style="font-size:0.6em">Gilles Louppe (CERN) presentation on <a href ref="https://www.youtube.com/watch?v=DGJTEBt0d-s">scikit-optimise and a bit on Bayes Opt using RF</a></li>
+							<li style="font-size:0.6em">N. Freitas (Oxford,DeepMind) lecture on <a href="https://www.youtube.com/watch?v=vz3D36VXefI">Bayesian Optimisation and Multi-Armed Bandits</a></li>
+							<li style="font-size:0.6em">Javier Gonzalez (Amazon): <a href="https://www.youtube.com/watch?list=PLpTp0l_CVmgwyAthrUmmdIFiunV1VvicM&v=OtWjB6lv4CE">Introduction to Bayesian Optimisation</a></li>
+							<li style="font-size:0.6em">Gilles Louppe (CERN) presentation on <a href="https://www.youtube.com/watch?v=DGJTEBt0d-s">scikit-optimise and a bit on Bayes Opt using RF</a></li>
 						</ul>
 						<p>Bayesian Optimisation Software (Python)</p>
 						<ul>
-							<li style="font-size:0.6em"><a href ref="https://scikit-optimize.github.io/">scikit-optimise</a></li>
+							<li style="font-size:0.6em"><a href="https://scikit-optimize.github.io/">scikit-optimise</a></li>
 								<ul>
 									<li style="font-size:0.4em">Most straightforward to use, see third video above</li>
 									<li style="font-size:0.4em">Allows custom regressors (in addition to GP) for surrogate underlying function modelling: Random Forests, Neural Netwokrs, etc..</li>
 								</ul>
-							<li style="font-size:0.6em"><a href ref="https://gpflowopt.readthedocs.io/en/latest/intro.html#install">GPflowOpt</a></li>
+							<li style="font-size:0.6em"><a href="https://gpflowopt.readthedocs.io/en/latest/intro.html#install">GPflowOpt</a></li>
 							<ul>
 								<li style="font-size:0.4em">Built on top of GPflow [which was inspired by GPy(Sheffield)]; built on top of TensorFlow</li>
 								<li style="font-size:0.4em">Implements sparse GP approximations >> scalable</li>
 								<li style="font-size:0.4em">More customisation: kernel design</li>
 								<li style="font-size:0.4em">Early stages, ontly continious parameters (can easily add categorical though: hamming distance)</li>
 							</ul>
-							<li style="font-size:0.6em"><a href ref="https://sheffieldml.github.io/GPyOpt/">GPyOpt</a></li>
+							<li style="font-size:0.6em"><a href="https://sheffieldml.github.io/GPyOpt/">GPyOpt</a></li>
 							<ul>
-								<li style="font-size:0.4em">Lots of <a href ref="https://github.com/SheffieldML/GPyOpt/tree/devel/manual">examples</a></li>
+								<li style="font-size:0.4em">Lots of <a href="https://github.com/SheffieldML/GPyOpt/tree/devel/manual">examples</a></li>
 								<li style="font-size:0.4em">More customisation</li>
 								<li style="font-size:0.4em">Supports discrete and categorical parameters</li>
 							</ul>
@@ -100,12 +100,12 @@
 
 						<p>Interesting literature:</p>
 						<ul>
-							<li style="font-size:0.4em">Brochu, Cora, and de Freitas, <a href ref="https://arxiv.org/abs/1012.2599">“A Tutorial on Bayesian Optimization of Expensive Cost Functions,
+							<li style="font-size:0.4em">Brochu, Cora, and de Freitas, <a href="https://arxiv.org/abs/1012.2599">“A Tutorial on Bayesian Optimization of Expensive Cost Functions,
 								with Application to Active User Modeling and Hierarchical Reinforcement Learning.”</a></li>
-							<li style="font-size:0.4em">Shahriari, Swersky, and Freitas, <a href ref="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7352306">“Taking the Human Out of the Loop:
+							<li style="font-size:0.4em">Shahriari, Swersky, and Freitas, <a href="http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=7352306">“Taking the Human Out of the Loop:
 A Review of Bayesian Optimization”</a></li>
-							<li style="font-size:0.4em">Snoek, Larochelle, and Adams, <a href ref="https://arxiv.org/pdf/1206.2944.pdf">“Practical Bayesian Optimization of Machine Learning Algorithms.”</a></li>
-							<li style="font-size:0.4em">Swersky, Snoek, and Adams, <a href ref="https://arxiv.org/abs/1406.3896">“Freeze-Thaw Bayesian Optimization.”</a></li>
+							<li style="font-size:0.4em">Snoek, Larochelle, and Adams, <a href="https://arxiv.org/pdf/1206.2944.pdf">“Practical Bayesian Optimization of Machine Learning Algorithms.”</a></li>
+							<li style="font-size:0.4em">Swersky, Snoek, and Adams, <a href="https://arxiv.org/abs/1406.3896">“Freeze-Thaw Bayesian Optimization.”</a></li>
 						</ul>
 					</section>
 			</section>
@@ -154,7 +154,7 @@ A Review of Bayesian Optimization”</a></li>
 				<ul>
 					<li>$\mathcal{f}$ is a <i>black box</i> function (no closed form, no gradients)</li>
 					<li>$\mathcal{f}$ is expensive to evaluate</li>
-					<li>$\mathcal{f}$ most likely we only have access to noisy observations</li>
+					<li>most likely we only have access to noisy observations</li>
 				</ul>
 				<p>$$ y = \mathcal{f}(x) + \epsilon$$</p>
 			</section>
@@ -179,7 +179,7 @@ A Review of Bayesian Optimization”</a></li>
 				<section>
 					<h3>We try to fit a model to it! Regression!</h3>
 					<img src="Suplementary/observations_gp_mean_variance.png">
-					<p>Okay, so what?</p>
+					<p></p>
 				</section>
 
 				<section>
@@ -189,6 +189,42 @@ A Review of Bayesian Optimization”</a></li>
 					<p>$p(\mathbf{f}^{*} | \mathbf{y}, \sigma^{2}) = \mathcal{N}(\mathbf{\mu}^{*}, \mathbf{\Sigma}^{*}),$</p>
 					<p>$\mathbf{\mu}^{*} = \mathbf{R}^{T} (\mathbf{C} + \sigma^{2}\mathbf{I})^{-1} \mathbf{y}$</p>
 					<p>$\mathbf{\Sigma}^{*} = \mathbf{C}^{*} -\mathbf{R}^{T} (\mathbf{C} + \sigma^{2}\mathbf{I})^{-1} \mathbf{R}$</p>
+				</section>
+
+				<section>
+					<h3>Okay. Regression, so what?</h3>
+					<img src="Suplementary/observations_gp_mean_variance.png">
+					<p>Bold move - switch to GPSS slides!</p>
+				</section>
+
+				<section>
+					<ol>
+						<li>Use surrogate model of $\mathcal{f}$ to carry out the optimisation</li>
+						<br>
+						<li>Define a utility/loss/acquisition function $\mathcal{u}(.)$ to collect new data points satisfying some optimality criterion: <i>optimisation</i> as <i>decision</i></li>
+						<br>
+						<li>Study the decision problem as inference using the surrogate model</li>
+					</ol>
+					<p>Uncertainty quantification: Making informed decisions</p>
+				</section>
+
+				<section>
+					<h3>Utility function</h3>
+					<p>Utility should represent our study design goal:</p>
+					<ol>
+						<li>Active Learning and experimental design: reduce the uncertainty in the model</li>
+						<br>
+						<li>Optimisation: Minimize the loss in a sequence $x_{1}, ... , x_{n}$</li>
+						<p>$$r_{N} = \sum_{n=1}^{N} \mathcal{f}(x_{n}) - N\mathcal{f}(x_{M})$$</p>
+					</ol>
+					<p>(1) does a lot of exploration, whereas (2) encourages exploitation about the minimum of surrogate $\mathcal{f}$</p>
+				</section>
+
+				<section>
+					<p>GP upper (lower) confidence bound</p>
+					<p>Direct balance between exploration and exploitation:</p>
+					<p>$$\alpha_{LCB}(\mathbf{x}; \theta, \mathcal{D}) = - \mu(\mathbf{x}; \theta, \mathcal{D}) + \beta_{t} \sigma(\mathbf{x}; \theta, \mathcal{D})$$</p>
+					<img src="Suplementary/confidence_bound.png" width="60%">
 				</section>
 
 				<section>
