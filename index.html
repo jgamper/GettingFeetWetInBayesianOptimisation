@@ -228,6 +228,20 @@ A Review of Bayesian Optimization”</a></li>
 				</section>
 
 				<section>
+					<p>Bayesian Optimisation - methodology to perform global optimisation of multi-modal black box functions</p>
+					<ol>
+						<li>Choose some prior over the space of possible functions $\mathcal{f}$</li>
+						<br>
+						<li>Combine prior and the likelihood to get posterior</li>
+						<br>
+						<li>Use the posterior to decide where to take the next sample according to some acquisition function</li>
+						<br>
+						<li>Augment the data</li>
+					</ol>
+					<p>Iterate between 2 and 4 until the budget is over</p>
+				</section>
+
+				<section>
 					<img src="Suplementary/aquisition_func.png">
 				</section>
 
